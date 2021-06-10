@@ -143,9 +143,22 @@ function hazo_scripts()
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
 	}
+	// import link style css
 	wp_enqueue_style('hazo-404', get_template_directory_uri() . '/css/404.min.css', array(), _S_VERSION); // Replace Url mới
-	wp_enqueue_style('hazo-404', get_template_directory_uri() . '/css/404.min.css', array(), _S_VERSION); // Replace Url mới
+	wp_enqueue_style('hazo-bootstrap', get_template_directory_uri() . '/theme/FE-library/bootstrap.min.css', array(), _S_VERSION);
+	wp_enqueue_style('hazo-carousel', get_template_directory_uri() . '/theme/FE-library/owl.carousel.min.css', array(), _S_VERSION);
+	wp_enqueue_style('hazo-fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css', array(), _S_VERSION);
+	wp_enqueue_style('hazo-xzoom', get_template_directory_uri() . '/theme/FE-library/xzoom.css', array(), _S_VERSION);
+	wp_enqueue_style('hazo-stylestyle', get_template_directory_uri() . '/theme/scss/style.css', array(), _S_VERSION);
+	wp_enqueue_script('hazo-jqueryjquery', get_template_directory_uri() . '/theme/FE-library/jquery.min.js', array(), _S_VERSION, true);
+	// import link script
 	wp_enqueue_script('hazo-jquery', get_template_directory_uri() . '/assets/js/jquery.min.js', array(), _S_VERSION, true);
+	wp_enqueue_script('hazo-jqueryjquery', get_template_directory_uri() . '/theme/FE-library/jquery.min.js', array(), _S_VERSION, true);
+	wp_enqueue_script('hazo-jqueryhammer', get_template_directory_uri() . '/theme/FE-library/hammer.min.js', array(), _S_VERSION, true);
+	wp_enqueue_script('hazo-jqueryxzoom', get_template_directory_uri() . '/theme/FE-library/xzoom.min.js', array(), _S_VERSION, true);
+	wp_enqueue_script('hazo-jquerybootstrap', get_template_directory_uri() . '/theme/FE-library/bootstrap.min.js', array(), _S_VERSION, true);
+	wp_enqueue_script('hazo-jquerycarousel', get_template_directory_uri() . '/theme/FE-library/owl.carousel.min.js', array(), _S_VERSION, true);
+	wp_enqueue_script('hazo-jqueryindex', get_template_directory_uri() . '/theme/js/index.js', array(), _S_VERSION, true);
 }
 add_action('wp_enqueue_scripts', 'hazo_scripts');
 
